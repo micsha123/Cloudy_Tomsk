@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
+                xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context=".MainActivity$PlaceholderFragment"
+                android:background="@color/colorGreen">
+
+    <TextView
+        android:id="@+id/now_in_tomsk"
+        android:text="Сейчас в Томске:"
+        android:textSize="40sp"
+        android:shadowColor="@color/fbutton_color_clouds"
+        android:textColor="@color/colorDarkGreen"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:id="@+id/temp_text"
+        android:text="-14/1"
+        android:textSize="120sp"
+        android:textColor="@color/colorYellow"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="false"
+        android:layout_marginTop="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/warning_text"
+        android:textSize="50sp"
+        android:textColor="@color/colorGrey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="false"
+        android:layout_marginBottom="35dp"
+        android:layout_alignBottom="@+id/temp_text"
+        android:layout_centerHorizontal="true"/>
+
+    <com.project.malina.cloudytomsk.ProgressWheel
+        android:id="@+id/progressBar"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        ProgressWheel:text=""
+        ProgressWheel:textColor="#222222"
+        ProgressWheel:textSize="14sp"
+        ProgressWheel:rimColor="#44000000"
+        ProgressWheel:circleColor="#2E9121"
+        ProgressWheel:barLength="20dp"
+        ProgressWheel:barColor="#8000"
+        ProgressWheel:barWidth="25dp"
+        ProgressWheel:rimWidth="25dp"
+        ProgressWheel:spinSpeed="-1dp"
+        android:layout_alignBottom="@+id/temp_text"
+        android:layout_centerHorizontal="true"/>
+
+    <com.project.malina.cloudytomsk.FButton
+        android:id="@+id/refresh_button"
+        android:text="@string/action_refresh"
+        android:textColor="@color/colorGrey"
+        fbutton:buttonColor="@color/fbutton_color_pomegranate"
+        fbutton:shadowColor="@color/dark_knight"
+        fbutton:shadowEnabled="true"
+        fbutton:shadowHeight="5dp"
+        fbutton:cornerRadius="5dp"
+        android:layout_height="50dp"
+        android:layout_width="115dp"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="o"
+        android:textColor="@color/colorYellow"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="25sp"
+        android:id="@+id/degree"
+        android:layout_above="@+id/warning_text"
+        android:layout_toRightOf="@+id/temp_text"
+        android:layout_toEndOf="@+id/temp_text"
+        android:layout_marginBottom="8dp"/>
+
+</RelativeLayout>
